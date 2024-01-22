@@ -10,7 +10,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Foreground Audience
+  - Audience
   - Water
   - UI
   - Background Audience
