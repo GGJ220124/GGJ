@@ -7,7 +7,7 @@ public class audience_cheer : MonoBehaviour
     //Variables
     private bool on_floor = false;
     private float jump_height = 0.0f;
-    public bool laugh_active = true;
+    public bool laugh_active = false;
 
     void Laugh()
     {
@@ -30,7 +30,7 @@ public class audience_cheer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponentInParent<AudienceControl>().AudienceTrigger == true & on_floor == true)
+        if (laugh_active == true & on_floor == true)
         {
             on_floor = false;
             Randomiser();
