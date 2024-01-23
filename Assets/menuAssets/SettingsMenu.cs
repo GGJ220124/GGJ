@@ -23,7 +23,7 @@ public class SettingsMenu : MonoBehaviour {
 
     void Start ()
     {
-        this.gameObject.SetActive(true);
+        this.gameObject.SetActive(false);
         //Loads all player prefs except resolution
         LoadPrefs();
 
