@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuUI;
     private void Start()
     {
-        this.gameObject.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 
     void Update()

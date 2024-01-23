@@ -31,7 +31,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     private void Start() {
-        this.gameObject.SetActive(true); 
+        this.gameObject.SetActive(false); 
     }
 
 }
