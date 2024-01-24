@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour {
-/*
+
     public AudioMixer masterMixer;
 
     public TMPro.TMP_Dropdown resolutionDropdown;
@@ -17,7 +17,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public int currentResolutionIndex;
 
-    public Slider master;
+    public Slider master, music, effects;
 
     Resolution[] resolutions;
 
@@ -117,8 +117,11 @@ public class SettingsMenu : MonoBehaviour {
 
     void LoadPrefs()
     {
+        QualityDropdown.value = PlayerPrefs.GetInt("QualityLevel");
         master.value = PlayerPrefs.GetFloat("MasterVolume");
+        music.value = PlayerPrefs.GetFloat("BgmVolume");
+        effects.value = PlayerPrefs.GetFloat("SfxVolume");
         CheckFullscreen(PlayerPrefs.GetInt("FullscreenBool"));
     }
-*/
+
 }

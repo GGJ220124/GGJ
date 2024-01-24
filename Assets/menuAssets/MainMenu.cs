@@ -30,9 +30,5 @@ public class MainMenu : MonoBehaviour {
         Debug.Log("OPENED https://en.wikipedia.org/wiki/Baked_beans");
     }
 
-    private void Start() {
-
-    }
-
 }
 
