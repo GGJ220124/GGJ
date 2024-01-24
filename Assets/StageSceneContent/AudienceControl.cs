@@ -73,5 +73,7 @@ public class AudienceControl : MonoBehaviour
             }
         }
 
+        if (loop > Childnum) { loop = Childnum; }
+
     }
 }
