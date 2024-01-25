@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AudienceControl : MonoBehaviour
 {
@@ -11,7 +13,22 @@ public class AudienceControl : MonoBehaviour
     public bool off = false;
     public int loop = 1;
     private int Childnum = 0;
+    public AudioClip[] excellent_sfx = {};
+    public AudioClip[] good_sfx = { };
+    public AudioClip[] mid_sfx = { };
+    public AudioClip[] bad_sfx = { };
+    private AudioClip[] clips = { };
+    public int tier = 0;
 
+    void Tier_Select()
+    {
+        if (tier == 0) { clips = excellent_sfx; }
+        else if (tier == 1) { clips = good_sfx; }
+        else if (tier == 2) { clips = mid_sfx; }
+        else if (tier == 3) { clips = bad_sfx; }
+        else { tier = 0; }
+    }
+    
     void Bounce()
     {
         List<int> childlist = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
@@ -37,8 +54,9 @@ public class AudienceControl : MonoBehaviour
                     Debug.Log("duplicate!");
                 }
             }
-            
+
             transform.GetChild(ChosenChild).GetComponent<audience_cheer>().laugh_active = true;
+            
             Debug.Log(ChosenChild);
 
         }
@@ -60,8 +78,13 @@ public class AudienceControl : MonoBehaviour
     {
         if (on == true)
         {
-            Bounce();
             on = false;
+            Bounce();
+            Tier_Select();
+            int RandArrayElem = Random.Range(0, clips.Length);
+            AudioClip clip = clips[RandArrayElem];
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
+            
         }
 
         if (off == true)

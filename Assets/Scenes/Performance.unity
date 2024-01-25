@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1749,6 +1749,19 @@ MonoBehaviour:
   on: 0
   off: 0
   loop: 8
+  excellent_sfx:
+  - {fileID: 8300000, guid: d4e9bf8ddb79d924f8b47faac25d2849, type: 3}
+  - {fileID: 8300000, guid: 9a10ae8d7ee7672448e61aea61ab8173, type: 3}
+  good_sfx:
+  - {fileID: 8300000, guid: d4e9bf8ddb79d924f8b47faac25d2849, type: 3}
+  - {fileID: 8300000, guid: a509c897a0390304cb81902a4fa6ae51, type: 3}
+  - {fileID: 8300000, guid: 488ab0e45f801794bac8ed172edd2eaf, type: 3}
+  mid_sfx:
+  - {fileID: 8300000, guid: 8f34f080aa8a40141a86ae10920e8420, type: 3}
+  - {fileID: 8300000, guid: 9a2e97ee6bd5ef942afe16bc0c9404ae, type: 3}
+  bad_sfx:
+  - {fileID: 8300000, guid: a1c0830e115885a408a15b06203a6a79, type: 3}
+  tier: 0
 --- !u!1 &1220920132
 GameObject:
   m_ObjectHideFlags: 0
