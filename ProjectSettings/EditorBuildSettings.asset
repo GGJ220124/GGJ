@@ -8,10 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TempMenu.unity
     guid: d1980a25ad727204b85df65ce32dfc14
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7fd9006341382ce4fa97fa2da7655b85
+  - enabled: 1
+    path: Assets/Scenes/DeckBuilder.unity
+    guid: dd1db2d44f2102949a4e54b755386b82
+  - enabled: 1
     path: Assets/Scenes/Performance.unity
     guid: d0ae18037f7c2dc4ebae56be50721db1
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: bfd0ccee91d536b4091b9498f88a6c33
   m_configObjects: {}
