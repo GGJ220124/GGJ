@@ -9,9 +9,10 @@ using Random = UnityEngine.Random;
 public class AudienceControl : MonoBehaviour
 {
     //Variables
+    LogicManager LogicManager;
     public bool on = false;
     public bool off = false;
-    public int loop = 1;
+    private int loop;
     private int Childnum = 0;
     public AudioClip[] excellent_sfx = {};
     public AudioClip[] good_sfx = { };
@@ -22,11 +23,11 @@ public class AudienceControl : MonoBehaviour
 
     void Tier_Select()
     {
-        if (tier == 0) { clips = excellent_sfx; }
-        else if (tier == 1) { clips = good_sfx; }
-        else if (tier == 2) { clips = mid_sfx; }
-        else if (tier == 3) { clips = bad_sfx; }
-        else { tier = 0; }
+        if (LogicManager.Excellent == true) { clips = excellent_sfx; loop = 14; }
+        else if (LogicManager.Good == true) { clips = good_sfx; loop = 7; }
+        else if (LogicManager.Mid == true) { clips = mid_sfx; loop = 3; }
+        else if (LogicManager.Bad == true) { clips = bad_sfx; loop = 0; }
+        else { loop = 0; }
     }
     
     void Bounce()
@@ -70,7 +71,7 @@ public class AudienceControl : MonoBehaviour
     void Start()
     {
         Childnum = this.gameObject.transform.childCount;
-        
+        LogicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
     }
 
     // Update is called once per frame
@@ -79,8 +80,8 @@ public class AudienceControl : MonoBehaviour
         if (on == true)
         {
             on = false;
-            Bounce();
             Tier_Select();
+            Bounce();
             int RandArrayElem = Random.Range(0, clips.Length);
             AudioClip clip = clips[RandArrayElem];
             this.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);

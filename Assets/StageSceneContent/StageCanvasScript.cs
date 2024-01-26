@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StageCanvasScript : MonoBehaviour
 {
-    
+    public AudioClip clip;
+
     public void OnEndShowButton()
     {
         gameObject.transform.GetChild(2).GetComponent<Animation>().Play();
@@ -21,7 +22,8 @@ public class StageCanvasScript : MonoBehaviour
     void Start()
     {
         gameObject.transform.GetChild(1).GetComponent<Animation>().Play();
-        AudioClip clip = this.gameObject.GetComponent<AudioSource>().clip;
+        // AudioClip clip = this.gameObject.GetComponent<AudioSource>().clip;
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
+        this.gameObject.GetComponent<AudioSource>().Play();
     }
 }

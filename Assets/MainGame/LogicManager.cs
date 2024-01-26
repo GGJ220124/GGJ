@@ -101,6 +101,11 @@ public class LogicManager : MonoBehaviour
         mainManager.AudienceEnjoyment = AudienceEnjoyment;
     }
 
+    void TurnOff()
+    {
+        GameObject.Find("AudienceBody").GetComponent<AudienceControl>().off = true;
+    }
+
 }
 
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Audience
   - Floor
+  - Logic
+  - Manager
   layers:
   - Default
   - TransparentFX
